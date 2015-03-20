@@ -1,22 +1,19 @@
-githubUserSearch.controller('GitUserSearchController', function($scope) {
+githubUserSearch.controller('GitUserSearchController', function($scope, $resource) {
 
-$scope.doSearch = function(){
-
-$scope.searchResult = {
-   "items": [
-      {
-        "login": "tansaku",
-        "avatar_url": "https://avatars.githubusercontent.com/u/30216?v=3",
-        "html_url": "https://github.com/tansaku"
-      }, 
-      {
-        "login": "stephenlloyd",
-        "avatar_url": "https://avatars.githubusercontent.com/u/196474?v=3",
-        "html_url": "https://github.com/stephenlloyd"
-      }
-    ]
+  $scope.searchTerm = {
+    text: "Search a GitHub user"
   };
-};
 
+  $scope.doSearch = function(){
+    
 
+    var queryURL = 'https://api.github.com/search/users'
+    var searchResource = $resource(queryURL);
+
+    $scope.searchResult = searchResource.get({
+      q: $scope.searchTerm.text,
+      access_token: auth["clientToken"]
+    });
+    console.log($scope.searchResult)
+  };
 });

@@ -12,7 +12,7 @@ describe('GitUserSearchController', function() {
 
   it('initialises with an empty search result and term', function() {
     expect(scope.searchResult).toBeUndefined();
-    expect(scope.searchTerm).toBeUndefined();
+    expect(scope.searchTerm.text).toEqual("Search a GitHub user");
   });
 
   describe('when searching for a user', function() {
