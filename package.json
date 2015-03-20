@@ -14,14 +14,15 @@
     "morgan": "~1.5.1",
     "serve-favicon": "~2.2.0"
   },
+
   "main": "app.js",
   "devDependencies": {
     "jasmine-core": "^2.2.0",
     "karma": "^0.12.31",
     "karma-chrome-launcher": "^0.1.7",
     "karma-jasmine": "^0.3.5",
-    "karma-phantomjs-launcher": "^0.1.4"
-  },
-  "author": "",
-  "license": "ISC"
+    "karma-phantomjs-launcher": "^0.1.4",
+    "protractor": "^2.0.0"
+  }
+
 }

@@ -1,3 +1,7 @@
 node_modules
+<<<<<<< HEAD
 bower_components
 /public/js/auth.js
+=======
+bower_components
+>>>>>>> fb0f9d57f81a4ea45a62768e6cc692d704c7644c
